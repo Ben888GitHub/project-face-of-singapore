@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./components/HomePage";
+import About from "./components/About";
+import Events from "./components/Events";
+import Contestants from "./components/Contestants";
+import Winners from "./components/Winners";
+import SignUpForm from "./components/SignUpForm";
+import Contact from "./components/Contact";
+import { Element } from "react-scroll";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomePage />
+      {/* <br />
+      <br /> */}
+      <Element name="aboutElement">
+        <About />
+      </Element>
+
+      {/* <br /> */}
+      {/* <br /> */}
+
+      <Element name="eventsElement">
+        <Events />
+      </Element>
+
+      <br />
+      <br />
+      <Element name="contestantsElement">
+        <Contestants />
+      </Element>
+
+      {/* <br />
+      <br />
+      <br /> */}
+      <Element name="winnersElement">
+        <Winners />
+      </Element>
+
+      {/* <br />
+      <br /> */}
+      <Element name="signUpElements">
+        <SignUpForm />
+      </Element>
+
+      {/* <br />
+      <br /> */}
+      <Element name="contactElement">
+        <Contact />
+      </Element>
     </div>
   );
 }
