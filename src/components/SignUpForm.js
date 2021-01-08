@@ -11,8 +11,8 @@ import {
 import { useMediaQuery } from "react-responsive";
 
 function SignUpForm() {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1366 });
   const isBigScreen = useMediaQuery({ minDeviceWidth: 1824 });
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1366 });
 
   const isMobileDevice = useMediaQuery({ maxDeviceWidth: 767 });
   const isTabletDevice = useMediaQuery({
